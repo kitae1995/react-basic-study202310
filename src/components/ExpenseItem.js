@@ -1,11 +1,12 @@
 import React from 'react';
 // css 로딩
 import './ExpenseItem.css';
+import ExpenseDate from './ExpenseDate';
 
 const ExpenseItem = ({ title, price: propsPrice, date }) => {
-  //title,price,date등의 변수는 App.js에서 ExpnseItem 뒤에 선언된 props임
   // console.log(props);
-  // const price = 100000;
+
+  // const price = 99999;
   // const expenseDate = date;
   // const expenseTitle = title;
   // const expensePrice = propsPrice;
@@ -29,7 +30,7 @@ const ExpenseItem = ({ title, price: propsPrice, date }) => {
 
   return (
     <div className='expense-item'>
-      <div>{makeFormattedDate()}</div>
+      <ExpenseDate date={date} />
       <div className='expense-item__description'>
         <h2>{title}</h2>
         <div className='expense-item__price'>{formattedPrice}원</div>

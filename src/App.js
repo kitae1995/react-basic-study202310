@@ -19,7 +19,7 @@ const App = () => {
     {
       title: '낑깡',
       price: 500,
-      date: new Date(2023, 12, 23),
+      date: new Date(2023, 11, 23),
     },
   ];
 
