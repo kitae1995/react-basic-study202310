@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // css 로딩
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
-import Card from './UI/Card';
+import Card from '../UI/Card';
 
 const ExpenseItem = ({ title, price: propsPrice, date }) => {
   // let itemTitle = title;
@@ -10,9 +10,9 @@ const ExpenseItem = ({ title, price: propsPrice, date }) => {
   // 값이 변경되어 화면에 반영되어야 하는 값들은
   // useState 훅을 통해 상태변수로 관리한다.
 
-  //useState는 배열을 리턴하는데
-  //첫번째 요소는 관리할(이름 변경될) 상태값
-  //두번째 요소는 상태값을 변경하는 setter 함수
+  // useState는 배열을 리턴하는데
+  // 첫번째 요소는 관리할 상태값
+  // 두번째 요소는 상태값을 변경하는 setter 함수
   const [itemTitle, setItemTitle] = useState(title);
 
   // 1자리 숫자를 2자리수로 변환하는 함수
@@ -36,11 +36,11 @@ const ExpenseItem = ({ title, price: propsPrice, date }) => {
     // itemTitle = '안녕';
     // console.log(itemTitle);
 
-    // // state로 관리하는 변수는 반드시 setter로 변경하셔야 합니다.
+    // state로 관리하는 변수는 반드시 setter로만 변경하셔야 합니다.
     // setItemTitle((snapshot) => {
-    //   console.log(`snapshot : ${snapshot}`);
+    //   console.log(`snapshot: ${snapshot}`);
     //   //메롱이 새로운 값이 되며 기존 스냅샷과 다를 경우
-    //   //화면을 리렌더링하고 같을경우 진행하지 않는다.
+    //   //화면을 리렌더링하고 같을 경우 리렌더링 하지 않는다.
     //   return '메롱';
     // });
 
